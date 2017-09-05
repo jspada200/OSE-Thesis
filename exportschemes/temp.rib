@@ -1,0 +1,73 @@
+##RenderMan RIB
+#
+# This example attempts to replicate Figure 16 from 
+# "Physically-Based Shading at Disney", Burley, 2012
+#
+# $Revision: #1 $ $Date: 2015/04/23 $
+#
+version 3.04
+Display "disney_spt" "it" "rgba"
+Projection "perspective" "float fov" [15]
+Format 563 512 1
+Integrator "PxrPathTracer" "spt" "int numLightSamples" [4] 
+    "int numBxdfSamples" [4] "int numIndirectSamples" [0]
+Hider "raytrace" "int incremental" [1]
+    "int maxsamples" [50] "int minsamples" [9]
+Translate 0 0 49.2631
+Scale 1 1 -1 # world is right-handed
+WorldBegin 
+
+
+  #
+# a simple light rig $Revision: #1 $ $Date: 2015/04/23 $
+#
+AttributeBegin # {
+
+    Attribute "visibility" "int indirect" [0]
+
+    IfBegin "!defined(SKIPENV)"
+      AttributeBegin 
+        AreaLightSource "PxrEnvMapLight" "envlight" 
+            "float intensity" [1] "string envmap" ["desert.env"]
+        Sides 1
+        Opacity [1 1 1]
+        Rotate -90 1 0 0
+        Geometry "envsphere" 
+      AttributeEnd 
+    IfEnd
+
+    AttributeBegin 
+      Transform [ 49.0214 4.87617 45.7964 0  
+                  -7.96843 49.4662 3.26266 0  
+                  -19.5717 -4.56663 21.4362 0  
+                  -20.1224 35.1941 30.1932 1 ]
+        AreaLightSource "PxrAreaLight" "backlight" 
+                "string shape" ["rect"] "float intensity" [3]
+        ShadingRate 1000
+        Geometry "rectlight"
+     AttributeEnd 
+
+    AttributeBegin 
+        Transform [-0.427756 -0.624878 -15.1039 0  
+                   -6.3468 12.601 -0.34158 0  
+                   1.47654 0.74173 -0.0725036 0  
+                   48.0758 61.2751 -12.5641 1 ]
+        AreaLightSource "PxrAreaLight" "keylight" 
+                    "string shape" ["disk"] 
+                    "float intensity" [150]
+        ShadingRate 1000
+        Disk 0 0.25 360 
+    AttributeEnd 
+
+AttributeEnd #}
+
+	Attribute "visibility" "int transmission" [0]
+	AttributeBegin 
+		Attribute "identifier" "string name" ["sphere 0.0"]
+		Translate 0 0 0
+		ReadArchive 'C:\Users\jspad\AppData\Local\Temptmp.rib'
+		# Bxdf "PxrLMDiffuse" "default"
+		Rotate -90 1 0 0
+		Sphere 5 -5 5 360 
+	AttributeEnd 
+WorldEnd 

@@ -1,0 +1,59 @@
+Option "ribparse" "string varsubst" ["$"]
+Option "searchpath" "shader"    "/home/jspada/Desktop/RISRIBGEN_v2/exportScemes:/home/jspada/Desktop/RISRIBGEN_v2/exportScemes/shaders:@"
+Option "searchpath" "rixplugin" "${RMSTREE}/lib/shaders:@"
+#Option "statistics" "endofframe" [1]
+
+Hider "raytrace" "string integrationmode" ["path"] "int incremental" [1]
+	  "int minsamples" [0] "int maxsamples" [256]
+Integrator "PxrPathTracer" "PxrPathTracer" "int maxPathLength" [10] 
+PixelVariance 0.005
+
+Format 640 360 1
+Display "untitled" "it" "rgba"
+Projection "perspective" "fov" [20]
+
+Translate  0 0 30
+Rotate -30 1 0 0
+Rotate 45  0 1 0
+Scale 1 1 -1
+
+#Imager "background" "color color" [1 1 1]
+WorldBegin
+	# Bxdf "PxrLMDiffuse" "default"
+	# TransformBegin
+	#	Scale 4 4 4
+	#	ReadArchive "cutrAxes.rib"
+	# TransformEnd
+
+	AttributeBegin
+		AreaLightSource "PxrStdAreaLight" "PxrStdAreaLight4"
+				"float exposure" [50]
+				"color lightColor" [1 1 1]  # connectable
+		Attribute "visibility" "int camera" [1]
+		Sides 1 	# change to 2 for camera visibility
+		Attribute "visibility" "int indirect" [0] "int transmission" [0]
+		TransformBegin
+			Rotate   0 0 1 0
+			Rotate -40 1 0 0
+			Translate 0 0 10
+			Scale 2 2 1
+			Bxdf "PxrLightEmission" "emitter"
+			ShadingRate 5
+			ReverseOrientation
+			Geometry "rectlight"
+		TransformEnd
+	AttributeEnd
+
+	AttributeBegin
+		Translate 0 1 0
+		# RRG_inset_ReadArchive 'spath'
+		Bxdf "PxrLMDiffuse" "default"
+		Sphere 1 -1 1 360
+	AttributeEnd
+	AttributeBegin
+		Bxdf "PxrLMDiffuse" "default"
+		Scale 50 1 50
+		Polygon "P" [-0.5 0 -0.5  -0.5 0 0.5  0.5 0 0.5  0.5 0 -0.5]
+				"st" [0 0  0 1  1 1  1 0]
+	AttributeEnd
+WorldEnd

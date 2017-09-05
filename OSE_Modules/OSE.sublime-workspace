@@ -1,0 +1,1268 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"getJobs",
+				"getAllJobsInQueue"
+			],
+			[
+				"job",
+				"jobobj"
+			],
+			[
+				"sch",
+				"scheduler"
+			],
+			[
+				"sc",
+				"sched"
+			],
+			[
+				"ed",
+				"edittype"
+			],
+			[
+				"DATA",
+				"dataobj"
+			],
+			[
+				"clear",
+				"clear_all"
+			],
+			[
+				"erro",
+				"errorlist"
+			],
+			[
+				"kong",
+				"kong_shots"
+			],
+			[
+				"kong_sho",
+				"kong_shot_list"
+			],
+			[
+				"p",
+				"pobj"
+			],
+			[
+				"command",
+				"commandobj"
+			],
+			[
+				"command_",
+				"command_queue"
+			],
+			[
+				"command_q",
+				"command_q_new"
+			],
+			[
+				"__",
+				"__init__"
+			],
+			[
+				"file",
+				"filesize	statement"
+			],
+			[
+				"open",
+				"open_shotdir	function"
+			],
+			[
+				"shot",
+				"shotdir"
+			],
+			[
+				"doall",
+				"doall_cmds	statement"
+			],
+			[
+				"hdr",
+				"hdrfile	statement"
+			],
+			[
+				"selecte",
+				"selected_q_obj"
+			],
+			[
+				"selec",
+				"selected_j_obj	statement"
+			],
+			[
+				"new_j",
+				"new_j_obj"
+			],
+			[
+				"des",
+				"deselect_queue	function"
+			],
+			[
+				"C_F",
+				"C_FAILED	statement"
+			],
+			[
+				"C_",
+				"C_FINISHED	statement"
+			],
+			[
+				"av",
+				"av_hi	statement"
+			],
+			[
+				"av_",
+				"av_med	statement"
+			],
+			[
+				"tot",
+				"totalunits"
+			],
+			[
+				"total",
+				"totaljobs"
+			],
+			[
+				"pro",
+				"procdata	statement"
+			],
+			[
+				"take",
+				"takekey	forstmt"
+			],
+			[
+				"new",
+				"new_take	statement"
+			],
+			[
+				"new_tak",
+				"new_take_dict	statement"
+			],
+			[
+				"new_",
+				"new_shot_data	statement"
+			],
+			[
+				"onl",
+				"only_phase_enabled	False"
+			],
+			[
+				"ph",
+				"phasetype	forstmt"
+			],
+			[
+				"thre",
+				"threads	statement"
+			],
+			[
+				"key",
+				"keys"
+			],
+			[
+				"is",
+				"isAlive	function"
+			],
+			[
+				"Threa",
+				"threading"
+			],
+			[
+				"pha",
+				"phasekey"
+			],
+			[
+				"select",
+				"select_queue	function"
+			],
+			[
+				"Qt",
+				"QtCore"
+			],
+			[
+				"sele",
+				"selected_j_obj	statement"
+			],
+			[
+				"attri",
+				"attributes_scrollArea"
+			],
+			[
+				"ru",
+				"run_	statement"
+			],
+			[
+				"up",
+				"updatecontrol	statement"
+			],
+			[
+				"update",
+				"updatecontrol	statement"
+			],
+			[
+				"q",
+				"q_list_do	statement"
+			],
+			[
+				"re",
+				"request_sched	function"
+			],
+			[
+				"emit",
+				"emiterobj	statement"
+			],
+			[
+				"sh",
+				"SH	statement"
+			],
+			[
+				"remove",
+				"remove_items	param"
+			],
+			[
+				"remo",
+				"removelines	statement"
+			],
+			[
+				"chan",
+				"changed_queues"
+			],
+			[
+				"not",
+				"notexists	statement"
+			],
+			[
+				"upd",
+				"updatelist	statement"
+			],
+			[
+				"ne",
+				"new	statement"
+			],
+			[
+				"mode",
+				"mode_changed	statement"
+			],
+			[
+				"mo",
+				"mode_changed	statement"
+			],
+			[
+				"dat",
+				"dataobj	statement"
+			],
+			[
+				"log",
+				"log"
+			],
+			[
+				"queue",
+				"queuelist	statement"
+			],
+			[
+				"Queue",
+				"QueueUpdator	class"
+			],
+			[
+				"part",
+				"parent"
+			],
+			[
+				"Data",
+				"DataObj"
+			],
+			[
+				"pat",
+				"parent"
+			],
+			[
+				"sche",
+				"scheduler"
+			],
+			[
+				"set",
+				"set_color"
+			],
+			[
+				"ex",
+				"except"
+			],
+			[
+				"get",
+				"getQueueInfo"
+			],
+			[
+				"upda",
+				"update	function"
+			],
+			[
+				"arg",
+				"argparser	function"
+			],
+			[
+				"pyqt",
+				"pyqtSignal	class"
+			],
+			[
+				"qu",
+				"queues"
+			],
+			[
+				"qui",
+				"quit_msg	statement"
+			],
+			[
+				"Custom",
+				"CustomContextMenu	instance"
+			],
+			[
+				"rndrcpu",
+				"rndrcpumin	statement"
+			],
+			[
+				"co",
+				"comment"
+			],
+			[
+				"sta",
+				"staticupdate_failed	statement"
+			],
+			[
+				"st",
+				"static"
+			],
+			[
+				"con",
+				"convert_time"
+			],
+			[
+				"set_",
+				"set_group"
+			],
+			[
+				"peeko",
+				"peekobj"
+			],
+			[
+				"QTime",
+				"QTimer	class"
+			],
+			[
+				"QTim",
+				"QTimer	class"
+			],
+			[
+				"chang",
+				"change_max_threads"
+			],
+			[
+				"widge",
+				"widgetobj	statement"
+			],
+			[
+				"widg",
+				"widgetobj	statement"
+			],
+			[
+				"object",
+				"object_value"
+			],
+			[
+				"wi",
+				"widgetobj	statement"
+			],
+			[
+				"var",
+				"var_mapping	statement"
+			],
+			[
+				"jp",
+				"jpcontrol"
+			],
+			[
+				"mainwin",
+				"mainwin"
+			],
+			[
+				"item",
+				"itemtype	statement"
+			],
+			[
+				"main",
+				"mainwin"
+			],
+			[
+				"update_",
+				"update_static	function"
+			],
+			[
+				"pass",
+				"password	statement"
+			],
+			[
+				"res",
+				"results_list	statement"
+			],
+			[
+				"chec",
+				"check_doall"
+			],
+			[
+				"cmd",
+				"cmd_list	forstmt"
+			],
+			[
+				"exc",
+				"excluded_grps	statement"
+			],
+			[
+				"show",
+				"showgrps	statement"
+			],
+			[
+				"cus",
+				"CUSTOM_RESOURCE"
+			],
+			[
+				"Host",
+				"hostinfo"
+			],
+			[
+				"num",
+				"num_jobs"
+			],
+			[
+				"max",
+				"max_jobs	statement"
+			],
+			[
+				"peek",
+				"peeko"
+			],
+			[
+				"appy",
+				"apply_async	function"
+			],
+			[
+				"ite",
+				"iteritems	function"
+			],
+			[
+				"launch",
+				"launchhost"
+			],
+			[
+				"Acc",
+				"accepted	function"
+			],
+			[
+				"QDia",
+				"QDialogButtonBox	class"
+			],
+			[
+				"loc",
+				"localhost	statement"
+			],
+			[
+				"tabl",
+				"tableItem"
+			],
+			[
+				"activ",
+				"activeHDRs	statement"
+			],
+			[
+				"name",
+				"nameItem"
+			],
+			[
+				"ac",
+				"activeHDRs"
+			],
+			[
+				"time",
+				"timedelta	class"
+			],
+			[
+				"date",
+				"datetime	module"
+			],
+			[
+				"da",
+				"datetime	module"
+			],
+			[
+				"return",
+				"returnDict	statement"
+			],
+			[
+				"ap",
+				"ap_hosts"
+			],
+			[
+				"pr",
+				"print_results	function"
+			],
+			[
+				"result",
+				"resultlist	statement"
+			],
+			[
+				"apply",
+				"apply_async	function"
+			],
+			[
+				"map",
+				"map_async	function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend_canvas.py",
+			"settings":
+			{
+				"buffer_size": 11762,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "backend_exporter.py",
+			"settings":
+			{
+				"buffer_size": 7420,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{\n    \"RENDERER\":\"rman\",\n    \"CUSTOM_NODES\": {\n    	\"RISOSLNode\": {\n    		\"menuLabel\": \"New RIS OSL Node\",\n    		\"_name\": \"String\",\n    		\"_type\": [\"pattern\"],\n    		\"_helptxt\": \"String\"\n    	}\n    }\n}",
+			"file": "settings/user.json",
+			"file_size": 231,
+			"file_write_time": 131174926418719937,
+			"settings":
+			{
+				"buffer_size": 201,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 327.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"Inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 643.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/jspada/Desktop/OSE",
+		"/home/jspada/Desktop/OSE/OSE_Modules",
+		"/home/jspada/Desktop/OSE/OSE_Modules/settings"
+	],
+	"file_history":
+	[
+		"/dept/ta/sand/jspadafora/main/oqtamon/lib/queue_attribute_panel.py",
+		"/dept/ta/SysMon/lib/failRateTask.py",
+		"/home/jspadafora/bin/changecpu.py",
+		"/home/jspadafora/ilm_work/proc_prediction/james_method/estimator/estimator_clean.py",
+		"/home/jspadafora/ilm_work/proc_prediction/james_method/estimator/est_settings_ttt.json",
+		"/home/jspadafora/bin/filter.py",
+		"/dept/ta/SysMon/monitorSetup.eco3",
+		"/dept/ta/SysMon/monitor.py",
+		"/lucas/ilm/show/ttt/home/prod/shotRanks/ttt-rankHOTlist.txt",
+		"/lucas/ilm/show/ttt/home/prod/shotRanks/ttt-rank1list.txt",
+		"/lucas/ilm/show/ttt/home/prod/shotRanks/ttt-rank2list.txt",
+		"/lucas/ilm/show/ttt/home/prod/shotRanks/ttt-rank3list.txt",
+		"/show/ttt/home/prod/shotRanks/ttt-rank1list.txt",
+		"/show/ttt/home/prod/shotRanks/ttt-rank2list.txt",
+		"/show/ttt/home/prod/shotRanks/ttt-rank3list.txt",
+		"/show/ttt/home/prod/shotRanks/ttt-rankHOTlist.txt",
+		"/show/ttt/jc/jc3290/td/log/kong_lo.17710/stats.xml",
+		"/home/jspadafora/estimator_smartsize.py",
+		"/dept/ta/sand/jspadafora/main/oqtamon/oqtamon.py",
+		"/home/jspadafora/work/proc_prediction/james_method/estimator/estimator_clean.py",
+		"/home/jspadafora/work/proc_prediction/james_method/estimator/estimator_spacer_cmd.py",
+		"/home/jspadafora/bin/BREAKUP",
+		"/dept/ta/sand/jspadafora/main/oqtamon/lib/main_window.py",
+		"/home/jspadafora/bin/custom_resource_stop.py",
+		"/dept/ta/sand/jspadafora/main/oqtamon/lib/dataobj.py",
+		"/dept/ta/sand/jspadafora/main/oqtamon/lib/job_attribute_panel.py",
+		"/dept/ta/sand/jspadafora/main/oqtamon/lib/constants.py",
+		"/home/sgillard/scripts/auto_sign_off",
+		"/home/jspadafora/lhost",
+		"/home/jspadafora/bin/doall_saver.py",
+		"/dept/ta/sand/jspadafora/main/oqtamon/oqtamon.sublime-project",
+		"/show/ttt/pa/pa0120/td/log/kong.29503/HDR.kong",
+		"/home/jspadafora/work/proc_prediction/james_method/statsexample.xml",
+		"/home/jspadafora/work/proc_prediction/organize_database_data.py",
+		"/home/jspadafora/work/proc_prediction/find_vars.py",
+		"/home/jspadafora/work/proc_prediction/finaled_shots.py",
+		"/home/jspadafora/work/proc_prediction/compute_database_data.py",
+		"/home/jspadafora/work/proc_prediction/avg_frames.py",
+		"/home/jspadafora/work/proc_prediction/all_weekly_shot_pus.py",
+		"/show/ttt/pa/pa0120/td/log/kong.29503/stats.xml",
+		"/home/jspadafora/bin/changeshow.py",
+		"/dept/ta/sand/jspadafora/main/oqtamon/lib/bu/dataobj_4.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/processHeaders.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.2/Resources/Tabs/RenderPanel/dialogs/launchDialog/hostsDialog.py",
+		"/home/jspadafora/temp.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.2/Resources/Tabs/RenderPanel/dialogs/launchDialog/launchDialog.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.2/Resources/Tabs/RenderPanel/renderPanelConstants.py",
+		"/san/dept/ta/sand/jspadafora/main/oqtamon/oqtamon.py",
+		"/san/dept/ta/sand/jspadafora/main/oqtamon/lib/main_window.py",
+		"/san/dept/ta/sand/jspadafora/main/oqtamon/lib/queue_attribute_panel.py",
+		"/san/dept/ta/sand/jspadafora/main/oqtamon/lib/dataobj.py",
+		"/san/dept/ta/sand/jspadafora/main/oqtamon/lib/bu/main_window_1.py",
+		"/dept/ta/sand/jspadafora/main/SysMon/data/eco/hostFailRate.eco3",
+		"/home/jspadafora/bin/db_templet.py",
+		"/home/jspadafora/whatever.py",
+		"/san/dept/ta/sand/jspadafora/main/oqtamon/lib/bu/dataobj.py",
+		"/san/dept/ta/sand/jspadafora/main/oqtamon/lib/main_window_bu.py",
+		"/san/dept/ta/sand/jspadafora/main/oqtamon/lib/dataobj_bu.py",
+		"/san/dept/ta/SysMon/templates/statusPage.html",
+		"/home/jspadafora/eco/katana.environment.eco",
+		"/home/jspadafora/eco/katana2_renderpanel.local.settings.eco",
+		"/home/jspadafora/Documents/oqtamon/lib/main_window.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.1/Resources/Tabs/RenderPanel/dialogs/launchDialog/hostsDialog.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.1/Resources/Tabs/RenderPanel/katanaRenderPanel.py",
+		"/dept/ta/SysMon/data/eco/hostFailRate.eco3",
+		"/home/jspadafora/bin/reconnectAll.py",
+		"/home/jspadafora/Documents/oqtamon/lib/test.py",
+		"/home/jspadafora/Documents/oqtamon/lib/dataobj.py",
+		"/home/jspadafora/Documents/oqtamon/lib/job_attribute_panel.py",
+		"/home/jspadafora/Documents/oqtamon/oqtamon.py",
+		"/home/jspadafora/Documents/Utilization_explorer.py",
+		"/dept/ta/SysMon/data/eco/failtest.eco3",
+		"/dept/ta/Sysmon",
+		"/home/jspadafora/bin/na.py",
+		"/home/jspadafora/bin/startAll.py",
+		"/dept/ta/freeHostCron/freeHostAssign.py",
+		"/home/jspadafora/bin/renderwatchon",
+		"/san/dept/ta/sand/jspadafora/main/farminator/farminator",
+		"/home/jspadafora/test.py",
+		"/san/dept/ta/sand/jspadafora/main/jspadafora_scripts/emailtest.py",
+		"/san/dept/ta/sand/jspadafora/main/jspadafora_scripts/ta_email/email_settings.eco3",
+		"/san/dept/ta/sand/jspadafora/main/jspadafora_scripts/ta_email/templets/default.html",
+		"/dept/ta/SysMon/templates/email-message.html",
+		"/san/dept/ta/sand/jspadafora/main/jspadafora_scripts/DOALLR",
+		"/san/dept/ta/sand/jspadafora/main/jspadafora_scripts/ta_email/__init__.py",
+		"/san/dept/ta/sand/jspadafora/main/jspadafora_scripts/ta_email/email_settings.eco3.py",
+		"/usr/lib64/python2.6/subprocess.py",
+		"/home/jspadafora/bin/seqrank_ef",
+		"/san/dept/ta/sand/jspadafora/main/SysMon/monitorSetup.eco3",
+		"/san/dept/ta/sand/jspadafora/main/SysMon/monitor.py",
+		"/home/jspadafora/bin/print_user_info",
+		"/dept/ta/bin/checkRunningQueues.py",
+		"/home/jspadafora/bin/nuke_makeScript.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/renderPanelLocations/renderPanelLocation.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/renderPanelLocations/renderPanelHeaderLocation.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.1/Resources/Tabs/RenderPanel/dialogs/launchDialog/launchDialog.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/renderPanelLibConstants.py",
+		"/web/sunnyside/sunnyside/sunnysideapp/views.py",
+		"/web/sunnyside/sunnyside/sunnysideapp/presetLayouts/basic.txt",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/renderPanelData.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.1/Resources/Tabs/RenderPanel/tabManagers/hdrVars/hdrVarsTab.py",
+		"/home/jspadafora/bin/test.py",
+		"/home/jspadafora/bin/timeout.py",
+		"/home/jspadafora/bin/freeHostAssign.eco3",
+		"/usr/lib64/python2.6/multiprocessing/pool.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/helperUtils/baseHeaders.py",
+		"/home/daniellec/scripts/host_info/obaq_host_info",
+		"/dept/ta/freeHostCron/freeHostAssign.eco3",
+		"/home/jspadafora/bin/freeHostAssign.py",
+		"/dept/ta/SysMon/lib/task.py",
+		"/dept/ta/SysMon/data/eco/prman.eco3",
+		"/dept/ta/SysMon/data/eco/cron.eco3",
+		"/san/dept/td/sand/jspadafora/main/katana/2.1/Resources/Tabs/RenderPanel/dialogs/hostsDialog/hostsDialog.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.1/Resources/Tabs/RenderPanel/dialogs/moflowDialogs/moflowDialogs.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.1/Resources/Tabs/RenderPanel/dialogs/errorDialog/errorDialog.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.2/Resources/Tabs/RenderPanel/README",
+		"/home/jspadafora/helloworldcron",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/helperUtils/headerBlueprints.py",
+		"/san/dept/td/sand/jspadafora/main/katana/2.2/Resources/Tabs/RenderPanel/dialogs/launchDialog/launchDialog.ui",
+		"/sww/gfx/lib64/python2.7/PennyParser.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/helperUtils/paramUtils.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/helperUtils/renderNodeUtils.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/errorChecking/renderChecks.py",
+		"/dept/ta/SysMon/test.py",
+		"/show/tmnt2/rc/rc0240/td/HDR.rc0240",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/helperUtils/headerUIInfo.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/errorChecking/headerChecks.py",
+		"/san/dept/td/sand/jspadafora/main/python/katanaRenderPanelLib/errorChecking/dbChecks.py"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/san/dept/ta/sand/jspadafora/main/python/luna",
+			"/dept/ta/SysMon/lib, /dept/ta/SysMon/",
+			"/home/jspadafora/Monitor/lib, /home/jspadafora/Monitor/",
+			"/home/jspadafora/Monitor/lib",
+			"/home/jspadafora/Monitor/xml,/home/jspadafora/Monitor_backup/xml",
+			"/san/dept/ta/sand/jspadafora/main/Monitor/xml",
+			"/san/dept/ta/sand/jspadafora/main/Monitor/lib",
+			"/san/dept/ta/sand/jspadafora/main/LicenseGraph/eco,/san/dept/ta/sand/jspadafora/main/Monitor,/san/dept/ta/sand/jspadafora/main/Monitor/lib",
+			"/san/dept/ta/sand/jspadafora/main/LicenseGraph/eco,/san/dept/ta/sand/jspadafora/main/Monitor",
+			"/san/dept/ta/sand/jspadafora/main/LicenseGraph/eco",
+			"/san/dept/ta/sand/jspadafora/main/renderGraph",
+			"/san/dept/ta/sand/jspadafora/main/rendergraphs",
+			"/san/dept/ta/sand/jspadafora/main/LicenseGraph",
+			"/san/dept/ta/sand/jspadafora/main/python/luna/",
+			"/san/dept/ta/sand/jspadafora/main/python/luna/dataObjects"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Jobs Found",
+			"self.update(force=True)",
+			"emit",
+			"json",
+			"shotdir",
+			"JobInfo",
+			"sched_job_update",
+			"2b",
+			"print",
+			"QColor",
+			"#",
+			"688",
+			"hi",
+			"print",
+			"new_job",
+			"queueHostsEnabled",
+			"SelectableItem",
+			"UpdateControl",
+			"obaq.scheduler",
+			"self.sh",
+			"obaq",
+			"connect",
+			"log",
+			"emit",
+			"JLo",
+			"289",
+			"QTimer",
+			"print",
+			"hmm",
+			"unable",
+			"conform",
+			"comp",
+			"RNDR",
+			"rndr",
+			"conform",
+			"comp",
+			"conform",
+			"comp",
+			"conform",
+			"comp",
+			"        self.attrs['rndrhighcpulimit'] = rndrcpumax\n        self.attrs['rndrlowcpulimit'] = rndrcpumax\n\n        self.attrs['rndrhighmemlimit'] = rndrmemmax\n        self.attrs['rndrlowmemlimit'] = rndrmemmax\n\n        self.attrs['rndrhightmplimit'] = rndrtmpmax\n        self.attrs['rndrlowtmplimit'] = rndrtmpmax",
+			"print",
+			"__runCmd",
+			"__createDOALLCmd",
+			"addHDRVariable",
+			"HDR",
+			"absolute_defs",
+			"variableTuples",
+			"getactivepa",
+			"getVariableTuples",
+			"variableTuples",
+			"activeHDRs",
+			"launchDialog",
+			"accept",
+			"HDR_BL",
+			"ToMan",
+			"first",
+			"firstfr",
+			"FirstFrameMismatch",
+			"frame",
+			"HDR_VARIABLES",
+			"inc",
+			"dochu",
+			"dorun",
+			"HDR_VARIABLES",
+			"populateErrorTable",
+			"first",
+			"firstfra",
+			"color",
+			"assignQueueColor",
+			"Assign Queue(s) a Color",
+			"color",
+			"buildPickupHdr",
+			"writePickupHeader",
+			"write",
+			"strip",
+			"sort",
+			"            returnstring = returnstring + \"Total Queued:\"+ queue['total_queued'] + \"<br />\"\n            returnstring = returnstring + \"Total Finished:\"+ queue['total_finished'] + \"<br />\"\n            returnstring = returnstring + \"Total Running:\"+ queue['total_running'] + \"<br />\"\n            returnstring = returnstring + \"Total Faililed:\"+ queue['total_failed'] + \"<br />\"\n            returnstring = returnstring + \"Start Time:\"+ queue['DOALL_START'] + \"<br />\"\n            returnstring = returnstring + \"End Time:\"+ queue['END_TIME'] + \"<br />\"\n            returnstring = returnstring + \"Log Dir:\"+ queue['LOGDIR'] + \"<br />\"",
+			"heigh",
+			"settings",
+			"print",
+			"        #",
+			"ts",
+			"pingAddressTask",
+			"XML",
+			"xml",
+			"customMessage",
+			"returnDict",
+			"notificationType",
+			"notification_type",
+			"failCount",
+			"maxFails",
+			"checkInter",
+			"lastCheck",
+			"lastSuccCheck",
+			"xmlFile",
+			"checkInter",
+			"lastCheck",
+			"taskObjs",
+			"xml",
+			"customMessage",
+			"notificationType",
+			"failCount",
+			"maxFails",
+			"checkInter",
+			"lastCheck",
+			"lastSuccCheck",
+			"xml",
+			"rendersupport@ilm.com",
+			"LogParserDB",
+			"print",
+			"printr",
+			"ut",
+			"ett",
+			"pat",
+			"ssu",
+			"pt",
+			"frt",
+			"lc",
+			"ut",
+			"ett",
+			"pat",
+			"jspadafora@ilm.com",
+			"return_dict",
+			"self.self.return_dict",
+			"return_dict",
+			"self.return_dict",
+			"self.self.return_dict"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"denoise",
+			"conform",
+			"COMP",
+			"comp",
+			"denoise",
+			"conform",
+			"denoise",
+			"conform",
+			"denoise",
+			"conform",
+			"            returnstring = returnstring + \"Total Queued:\" + str(queue['total_queued']) + \"<br />\"\n            returnstring = returnstring + \"Total Finished:\" + str(queue['total_finished']) + \"<br />\"\n            returnstring = returnstring + \"Total Running:\" + str(queue['total_running']) + \"<br />\"\n            returnstring = returnstring + \"Total Failed:\" + str(queue['total_failed']) + \"<br />\"\n            returnstring = returnstring + \"Start Time:\" + str(queue['DOALL_START']) + \"<br />\"\n            returnstring = returnstring + \"End Time:\" + str(queue['END_TIME']) + \"<br />\"\n            returnstring = returnstring + \"Log Dir:\" + str(queue['LOGDIR']) + \"<br />\"",
+			"# print",
+			"custom_message",
+			"return_dict",
+			"notification_type",
+			"notificationType",
+			"fail_count",
+			"max_fails",
+			"check_inter",
+			"last_check",
+			"last_succ_check",
+			"eco_file",
+			"check_inter",
+			"last_check",
+			"task_objs",
+			"custom_message",
+			"notification_type",
+			"fail_count",
+			"max_fails",
+			"check_inter",
+			"last_check",
+			"last_succ_check",
+			"jspadafora@ilm.com",
+			"getLastSunnyUpdate",
+			"processTask",
+			"failRate",
+			"licenseCheck",
+			"unheldTask",
+			"expectedThreads",
+			"pingAddress",
+			"rendersupport@ilm.com",
+			"self.return_dict",
+			"return_dict",
+			"self.return_dict",
+			"return_dict",
+			"self.return_dict",
+			"match_obj",
+			"convert_time_stamp",
+			"get_time_stamp",
+			"peeko_info_obj",
+			"find_total_threads",
+			"db_server",
+			"db_pass",
+			"db_user",
+			"interval",
+			"sql",
+			"current_time_stamp",
+			"time_out",
+			"fail_count",
+			"min_threads",
+			"group_obj",
+			"num_concurrent_threads",
+			"running_thead_info",
+			"job_info_obj",
+			"queues_in_group",
+			"job_info_objs",
+			"all_running_queues",
+			"queue_info_list",
+			"all_groups",
+			"get_unheld_jobs",
+			"running_thead_info_dic",
+			"peeko_info",
+			"xml_file",
+			"new_entry",
+			"log_root",
+			"log_tree",
+			"log_path",
+			"write_log",
+			"get_init_data",
+			"update_xml",
+			"run_check",
+			"xml_file",
+			"system_status",
+			"farm_status",
+			"license_status",
+			"systems_status",
+			"return_wip_page",
+			"return_string",
+			"data_list",
+			"data_obj",
+			"parse_timestamp",
+			"get_last_log",
+			"get_all_logs",
+			"search_pattern",
+			"find_log_file",
+			"build_ent_tree",
+			"my_dict",
+			"xml_path",
+			"base_xml_filename",
+			"smtp_obj",
+			"target_time",
+			"check_interval",
+			"last_run_time",
+			"run_tasks",
+			"my_id",
+			"final_list",
+			"get_xml",
+			"new_obj",
+			"obj_type",
+			"id_list",
+			"xml_list",
+			"build_task_objs",
+			"xml_files",
+			"scandir",
+			"query_licensemon",
+			"lic_data",
+			"query_clarisse",
+			"query_prman_license",
+			"query_sesictrl",
+			"return_dict",
+			"custom_notification",
+			"task_check",
+			"taskcheck",
+			"self.requestedCPUs",
+			"PingAddressTask",
+			"    "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "backend_canvas.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11762,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7963,
+								7963
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5760.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "backend_exporter.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2236,
+								2236
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2592.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "settings/user.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								201,
+								201
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 327.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "OSE.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 296.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

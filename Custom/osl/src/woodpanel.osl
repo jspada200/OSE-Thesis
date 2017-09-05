@@ -1,0 +1,38 @@
+float grove(
+		float in,
+		float out,
+		float grovewidth,
+		float u,
+		float v) {
+	float smoothu = smoothstep(in, in + grovewidth, u) * 1 - smoothstep(out, out + grovewidth, u); 
+	float smoothv = smoothstep(in, in + grovewidth, v) * 1 - smoothstep(out, out + grovewidth, v); 
+	return smoothu * smoothv;
+}
+
+shader woodpanel(
+	float repeat = 3,
+	float u_offset = 0,
+	float v_offset = 0,
+	int anewAttribute = 0 [[]],
+	float in = 0,
+	float out = 0,
+	float grovewidth = 0.1,
+	color panelcolor = color(1, 0, 0),
+	color grovecolor = color(0, 1, 0),
+    output color resultRGB = 0,
+    output float resultF = 0
+    )
+{
+	float uu = mod(u * repeat, 1);
+	float vv = mod(v * repeat, 1) + v_offset;
+	float row = floor(v * repeat + anewAttribute);
+
+	if (mod(row, 2) != 0) {
+		uu = uu + u_offset;
+	}
+
+	float blend = grove(in, out, grovewidth, uu, vv);
+
+	resultRGB = mix(panelcolor, grovecolor, blend);
+	resultF = blend;
+}

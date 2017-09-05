@@ -1,0 +1,10 @@
+# disk1.rib
+# setting a perspective view
+ 
+Display "disk1" "framebuffer" "rgb"
+Projection "perspective" "fov" 40
+Format 320 240 1
+ 
+WorldBegin
+    Disk 3 0.25 360
+WorldEnd

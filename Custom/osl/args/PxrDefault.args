@@ -1,0 +1,8 @@
+<args format="1.0">
+	<shaderType>
+		<tag value="Nope" />
+	</shaderType>
+	<help />
+
+	<rfmdata classification="rendernode/RenderMan/pattern" nodeid="80861" />
+</args>

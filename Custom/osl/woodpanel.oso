@@ -1,0 +1,128 @@
+OpenShadingLanguage 1.00
+# Compiled by oslc 1.7.4.pixar38bde12
+# options: -o G:\Dropbox\OSE\Custom\osl\woodpanel.oso
+shader woodpanel
+param	float	repeat	3		%read{0,13} %write{2147483647,-1}
+param	float	u_offset	0		%read{23,23} %write{2147483647,-1}
+param	float	v_offset	0		%read{12,12} %write{2147483647,-1}
+param	float	anewAttribute	0		%read{14,14} %write{2147483647,-1}
+param	float	in	0		%read{25,32} %write{2147483647,-1}
+param	float	out	0		%read{28,35} %write{2147483647,-1}
+param	float	grovewidth	0.1		%read{25,34} %write{2147483647,-1}
+param	color	panelcolor	1 0 0		%read{38,38} %write{2147483647,-1}
+param	color	grovecolor	0 1 0		%read{38,38} %write{2147483647,-1}
+oparam	color	resultRGB	0 0 0		%read{2147483647,-1} %write{38,38}
+oparam	float	resultF	0		%read{2147483647,-1} %write{39,39}
+global	float	u	%read{0,0} %write{2147483647,-1}
+global	float	v	%read{6,13} %write{2147483647,-1}
+local	float	___305_smoothu	%read{37,37} %write{30,30}
+local	float	___305_smoothv	%read{37,37} %write{36,36}
+local	float	uu	%read{23,29} %write{5,23}
+local	float	vv	%read{32,35} %write{12,12}
+local	float	row	%read{17,20} %write{15,15}
+local	float	blend	%read{38,39} %write{37,37}
+temp	float	$tmp1	%read{2,5} %write{0,0}
+const	float	$const2	1		%read{2,33} %write{2147483647,-1}
+const	string	$const3	"mod"		%read{1,16} %write{2147483647,-1}
+temp	float	$tmp2	%read{4,4} %write{3,3}
+temp	float	$tmp3	%read{3,3} %write{2,2}
+temp	float	$tmp4	%read{5,5} %write{4,4}
+temp	float	$tmp5	%read{12,12} %write{11,11}
+temp	float	$tmp6	%read{8,11} %write{6,6}
+temp	float	$tmp7	%read{10,10} %write{9,9}
+temp	float	$tmp8	%read{9,9} %write{8,8}
+temp	float	$tmp9	%read{11,11} %write{10,10}
+temp	float	$tmp10	%read{14,14} %write{13,13}
+temp	float	$tmp11	%read{15,15} %write{14,14}
+temp	float	$tmp12	%read{21,21} %write{20,20}
+const	float	$const5	2		%read{17,19} %write{2147483647,-1}
+temp	float	$tmp13	%read{19,19} %write{18,18}
+temp	float	$tmp14	%read{18,18} %write{17,17}
+temp	float	$tmp15	%read{20,20} %write{19,19}
+const	int	$const6	0		%read{21,21} %write{2147483647,-1}
+temp	int	$tmp16	%read{22,22} %write{21,21}
+const	string	$const7	"grove"		%read{24,24} %write{2147483647,-1}
+temp	float	$tmp17	%read{27,27} %write{26,26}
+temp	float	$tmp18	%read{26,26} %write{25,25}
+temp	float	$tmp19	%read{30,30} %write{27,27}
+temp	float	$tmp20	%read{30,30} %write{29,29}
+temp	float	$tmp21	%read{29,29} %write{28,28}
+temp	float	$tmp22	%read{33,33} %write{32,32}
+temp	float	$tmp23	%read{32,32} %write{31,31}
+temp	float	$tmp24	%read{36,36} %write{33,33}
+temp	float	$tmp25	%read{36,36} %write{35,35}
+temp	float	$tmp26	%read{35,35} %write{34,34}
+code ___main___
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:29
+# 	float vv = mod(v * repeat, 1) + v_offset;
+	mul		$tmp1 u repeat 	%filename{"G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl"} %line{29} %argrw{"wrr"}
+	functioncall	$const3 6 	%argrw{"r"}
+# C:/Program Files\\Pixar\\RenderManProServer-21.2\\lib\\osl\\include\\stdosl.h:135
+# color  log (color a,  float b) { return log(a)/log(b); }
+	div		$tmp3 $tmp1 $const2 	%filename{"C:/Program Files\\Pixar\\RenderManProServer-21.2\\lib\\osl\\include\\stdosl.h"} %line{135} %argrw{"wrr"}
+	floor		$tmp2 $tmp3 	%argrw{"wr"}
+	mul		$tmp4 $const2 $tmp2 	%argrw{"wrr"}
+	sub		uu $tmp1 $tmp4 	%argrw{"wrr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:30
+# 	float row = floor(v * repeat + anewAttribute);
+	mul		$tmp6 v repeat 	%filename{"G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl"} %line{30} %argrw{"wrr"}
+	functioncall	$const3 12 	%argrw{"r"}
+# C:/Program Files\\Pixar\\RenderManProServer-21.2\\lib\\osl\\include\\stdosl.h:135
+# vector log (vector a, float b) { return log(a)/log(b); }
+	div		$tmp8 $tmp6 $const2 	%filename{"C:/Program Files\\Pixar\\RenderManProServer-21.2\\lib\\osl\\include\\stdosl.h"} %line{135} %argrw{"wrr"}
+	floor		$tmp7 $tmp8 	%argrw{"wr"}
+	mul		$tmp9 $const2 $tmp7 	%argrw{"wrr"}
+	sub		$tmp5 $tmp6 $tmp9 	%argrw{"wrr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:30
+# 	float row = floor(v * repeat + anewAttribute);
+	add		vv $tmp5 v_offset 	%filename{"G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl"} %line{30} %argrw{"wrr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:31
+# 
+	mul		$tmp10 v repeat 	%line{31} %argrw{"wrr"}
+	add		$tmp11 $tmp10 anewAttribute 	%argrw{"wrr"}
+	floor		row $tmp11 	%argrw{"wr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:33
+# 		uu = uu + u_offset;
+	functioncall	$const3 21 	%line{33} %argrw{"r"}
+# C:/Program Files\\Pixar\\RenderManProServer-21.2\\lib\\osl\\include\\stdosl.h:135
+# PERCOMP1 (expm1)
+	div		$tmp14 row $const5 	%filename{"C:/Program Files\\Pixar\\RenderManProServer-21.2\\lib\\osl\\include\\stdosl.h"} %line{135} %argrw{"wrr"}
+	floor		$tmp13 $tmp14 	%argrw{"wr"}
+	mul		$tmp15 $const5 $tmp13 	%argrw{"wrr"}
+	sub		$tmp12 row $tmp15 	%argrw{"wrr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:33
+# 		uu = uu + u_offset;
+	neq		$tmp16 $tmp12 $const6 	%filename{"G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl"} %line{33} %argrw{"wrr"}
+	if		$tmp16 24 24 	%argrw{"r"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:34
+# 	}
+	add		uu uu u_offset 	%line{34} %argrw{"wrr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:37
+# 
+	functioncall	$const7 38 	%line{37} %argrw{"r"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:8
+# 
+	add		$tmp18 in grovewidth 	%line{8} %argrw{"wrr"}
+	smoothstep	$tmp17 in $tmp18 uu 	%argrw{"wrrr"}
+	mul		$tmp19 $tmp17 $const2 	%argrw{"wrr"}
+	add		$tmp21 out grovewidth 	%argrw{"wrr"}
+	smoothstep	$tmp20 out $tmp21 uu 	%argrw{"wrrr"}
+	sub		___305_smoothu $tmp19 $tmp20 	%argrw{"wrr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:10
+# 
+	add		$tmp23 in grovewidth 	%line{10} %argrw{"wrr"}
+	smoothstep	$tmp22 in $tmp23 vv 	%argrw{"wrrr"}
+	mul		$tmp24 $tmp22 $const2 	%argrw{"wrr"}
+	add		$tmp26 out grovewidth 	%argrw{"wrr"}
+	smoothstep	$tmp25 out $tmp26 vv 	%argrw{"wrrr"}
+	sub		___305_smoothv $tmp24 $tmp25 	%argrw{"wrr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:12
+# }
+	mul		blend ___305_smoothu ___305_smoothv 	%line{12} %argrw{"wrr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:39
+# 	resultF = blend;
+	mix		resultRGB panelcolor grovecolor blend 	%line{39} %argrw{"wrrr"}
+# G:\\Dropbox\\OSE\\Custom\\osl\\src\\woodpanel.osl:40
+# }
+	assign		resultF blend 	%line{40} %argrw{"wr"}
+	end

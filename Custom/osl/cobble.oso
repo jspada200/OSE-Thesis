@@ -1,0 +1,165 @@
+OpenShadingLanguage 1.00
+# Compiled by oslc 1.7.4.pixar38bde12
+# options: -v -o /root/Desktop/OSE_Reorganized/OSE/Custom/osl/cobble.oso
+shader cobblestone
+param	float	s	0		%read{0,0} %write{2147483647,-1} %derivs
+param	float	t	0		%read{6,6} %write{2147483647,-1} %derivs
+param	float	seed	1		%read{24,26} %write{2147483647,-1} %derivs
+param	float	max_pt_offset	0.0099999998		%read{31,34} %write{2147483647,-1}
+param	float	scale	1		%read{0,6} %write{2147483647,-1} %derivs
+param	int	rows	3		%read{12,12} %write{2147483647,-1} %derivs
+param	int	cols	3		%read{14,14} %write{2147483647,-1} %derivs
+oparam	float	lumin	0		%read{2147483647,-1} %write{20,52}
+oparam	color	resultRGB	0 0 0		%read{2147483647,-1} %write{20,52}
+local	float	ss	%read{17,52} %write{5,5} %derivs
+local	float	tt	%read{17,52} %write{11,11} %derivs
+local	float	sinc	%read{20,52} %write{13,13} %derivs
+local	float	tinc	%read{20,52} %write{15,15} %derivs
+local	point	cp	%read{20,52} %write{16,52}
+local	point	st	%read{20,52} %write{17,17}
+local	float	___305_x	%read{20,52} %write{19,52} %derivs
+local	float	___307_y	%read{20,52} %write{20,52} %derivs
+local	point	___308_randpt	%read{20,52} %write{20,52} %derivs
+local	float	___308_px	%read{20,52} %write{20,52}
+local	float	___308_py	%read{20,52} %write{20,52}
+local	point	___308_newpoint	%read{20,52} %write{20,52}
+local	float	___309_colorid	%read{2147483647,-1} %write{20,52}
+temp	float	$tmp1	%read{2,5} %write{0,0} %derivs
+const	int	$const1	1		%read{33,47} %write{2147483647,-1}
+const	float	$const2	1		%read{2,23} %write{2147483647,-1}
+const	string	$const3	"mod"		%read{1,7} %write{2147483647,-1}
+temp	float	$tmp2	%read{4,4} %write{3,3} %derivs
+temp	float	$tmp3	%read{3,3} %write{2,2} %derivs
+temp	float	$tmp4	%read{5,5} %write{4,4} %derivs
+temp	float	$tmp5	%read{8,11} %write{6,6} %derivs
+temp	float	$tmp6	%read{10,10} %write{9,9} %derivs
+temp	float	$tmp7	%read{9,9} %write{8,8} %derivs
+temp	float	$tmp8	%read{11,11} %write{10,10} %derivs
+temp	float	$tmp9	%read{13,13} %write{12,12} %derivs
+temp	float	$tmp10	%read{15,15} %write{14,14} %derivs
+const	point	$const4	10 10 10		%read{16,16} %write{2147483647,-1}
+const	int	$const5	0		%read{19,45} %write{2147483647,-1}
+const	float	$const6	0		%read{17,42} %write{2147483647,-1}
+temp	int	$tmp11	%read{18,52} %write{19,52}
+temp	int	$tmp12	%read{20,52} %write{20,52}
+const	string	$const7	"perlin"		%read{29,29} %write{2147483647,-1}
+temp	point	$tmp13	%read{20,52} %write{20,52} %derivs
+temp	float	$tmp14	%read{20,52} %write{20,52} %derivs
+temp	float	$tmp15	%read{20,52} %write{20,52} %derivs
+temp	float	$tmp16	%read{20,52} %write{20,52} %derivs
+temp	float	$tmp17	%read{20,52} %write{20,52} %derivs
+temp	float	$tmp18	%read{20,52} %write{20,52}
+temp	float	$tmp19	%read{20,52} %write{20,52}
+temp	float	$tmp20	%read{20,52} %write{20,52}
+temp	float	$tmp21	%read{20,52} %write{20,52}
+temp	float	$tmp22	%read{20,52} %write{20,52}
+temp	float	$tmp23	%read{20,52} %write{20,52}
+temp	int	$tmp24	%read{20,52} %write{20,52}
+temp	float	$tmp25	%read{20,52} %write{20,52}
+const	float	$const9	3		%read{42,42} %write{2147483647,-1}
+temp	float	$tmp26	%read{20,52} %write{20,52}
+const	string	$const10	"gabor"		%read{41,41} %write{2147483647,-1}
+temp	float	$tmp27	%read{20,52} %write{20,52}
+const	string	$const11	"uperlin"		%read{46,48} %write{2147483647,-1}
+temp	float	$tmp28	%read{20,52} %write{20,52}
+temp	float	$tmp29	%read{20,52} %write{20,52}
+temp	float	$tmp30	%read{20,52} %write{20,52}
+const	float	$const12	0.5		%read{49,49} %write{2147483647,-1}
+const	string	$const13	"usimplex"		%read{50,50} %write{2147483647,-1}
+code ___main___
+# Custom/osl/src/cobble.osl:15
+# 	//float rs = mix(0.0, max_pt_offset, rand("perlin", ss));
+	mul		$tmp1 s scale 	%filename{"Custom/osl/src/cobble.osl"} %line{15} %argrw{"wrr"}
+	functioncall	$const3 6 	%argrw{"r"}
+# /opt/pixar/RenderManProServer-21.2/lib/osl/include/stdosl.h:135
+# PERCOMP1 (floor)
+	div		$tmp3 $tmp1 $const2 	%filename{"/opt/pixar/RenderManProServer-21.2/lib/osl/include/stdosl.h"} %line{135} %argrw{"wrr"}
+	floor		$tmp2 $tmp3 	%argrw{"wr"}
+	mul		$tmp4 $const2 $tmp2 	%argrw{"wrr"}
+	sub		ss $tmp1 $tmp4 	%argrw{"wrr"}
+# Custom/osl/src/cobble.osl:18
+# 	//float rt = mix(0.0, max_pt_offset, rand("perlin", tt));
+	mul		$tmp5 t scale 	%filename{"Custom/osl/src/cobble.osl"} %line{18} %argrw{"wrr"}
+	functioncall	$const3 12 	%argrw{"r"}
+# /opt/pixar/RenderManProServer-21.2/lib/osl/include/stdosl.h:135
+# PERCOMP1 (fabs)
+	div		$tmp7 $tmp5 $const2 	%filename{"/opt/pixar/RenderManProServer-21.2/lib/osl/include/stdosl.h"} %line{135} %argrw{"wrr"}
+	floor		$tmp6 $tmp7 	%argrw{"wr"}
+	mul		$tmp8 $const2 $tmp6 	%argrw{"wrr"}
+	sub		tt $tmp5 $tmp8 	%argrw{"wrr"}
+# Custom/osl/src/cobble.osl:22
+# 	float tinc = 1.0 / cols;
+	assign		$tmp9 rows 	%filename{"Custom/osl/src/cobble.osl"} %line{22} %argrw{"wr"}
+	div		sinc $const2 $tmp9 	%argrw{"wrr"}
+# Custom/osl/src/cobble.osl:23
+# 
+	assign		$tmp10 cols 	%line{23} %argrw{"wr"}
+	div		tinc $const2 $tmp10 	%argrw{"wrr"}
+# Custom/osl/src/cobble.osl:25
+# 	point st = point(ss, tt, 0);
+	assign		cp $const4 	%line{25} %argrw{"wr"}
+# Custom/osl/src/cobble.osl:26
+# 
+	point		st ss tt $const6 	%line{26} %argrw{"wrrr"}
+# Custom/osl/src/cobble.osl:28
+# 		for (float y = 0; y <= 1.0; y = y + tinc) {
+	for		$tmp11 20 21 52 53 	%line{28} %argrw{"r"}
+	assign		___305_x $const5 	%argrw{"wr"}
+	le		$tmp11 ___305_x $const2 	%argrw{"wrr"}
+# Custom/osl/src/cobble.osl:29
+# 				point randpt = noise("perlin", point(x+seed*ss, y+seed*tt, 0));
+	for		$tmp12 23 24 51 52 	%line{29} %argrw{"r"}
+	assign		___307_y $const5 	%argrw{"wr"}
+	le		$tmp12 ___307_y $const2 	%argrw{"wrr"}
+# Custom/osl/src/cobble.osl:30
+# 				float px = mix(0.0, max_pt_offset, randpt[0]) + x;
+	mul		$tmp14 seed ss 	%line{30} %argrw{"wrr"}
+	add		$tmp15 ___305_x $tmp14 	%argrw{"wrr"}
+	mul		$tmp16 seed tt 	%argrw{"wrr"}
+	add		$tmp17 ___307_y $tmp16 	%argrw{"wrr"}
+	point		$tmp13 $tmp15 $tmp17 $const6 	%argrw{"wrrr"}
+	noise		___308_randpt $const7 $tmp13 	%argrw{"wrr"}
+# Custom/osl/src/cobble.osl:31
+# 				float py = mix(0.0, max_pt_offset, randpt[1]) + y;
+	compref		$tmp19 ___308_randpt $const5 	%line{31} %argrw{"wrr"}
+	mix		$tmp18 $const6 max_pt_offset $tmp19 	%argrw{"wrrr"}
+	add		___308_px $tmp18 ___305_x 	%argrw{"wrr"}
+# Custom/osl/src/cobble.osl:32
+# 				point newpoint = point(px, py, 0);
+	compref		$tmp21 ___308_randpt $const1 	%line{32} %argrw{"wrr"}
+	mix		$tmp20 $const6 max_pt_offset $tmp21 	%argrw{"wrrr"}
+	add		___308_py $tmp20 ___307_y 	%argrw{"wrr"}
+# Custom/osl/src/cobble.osl:33
+# 				if(distance(st, newpoint) < distance(st, cp)){
+	point		___308_newpoint ___308_px ___308_py $const6 	%line{33} %argrw{"wrrr"}
+# Custom/osl/src/cobble.osl:34
+# 						float colorid = floor(mix(0, 3, noise("gabor", randpt)));
+	distance	$tmp22 st ___308_newpoint 	%line{34} %argrw{"wrr"}
+	distance	$tmp23 st cp 	%argrw{"wrr"}
+	lt		$tmp24 $tmp22 $tmp23 	%argrw{"wrr"}
+	if		$tmp24 51 51 	%argrw{"r"}
+# Custom/osl/src/cobble.osl:35
+# 						cp = newpoint;
+	noise		$tmp26 $const10 ___308_randpt 	%line{35} %argrw{"wrr"} %argderivs{2}
+	mix		$tmp25 $const6 $const9 $tmp26 	%argrw{"wrrr"}
+	floor		___309_colorid $tmp25 	%argrw{"wr"}
+# Custom/osl/src/cobble.osl:36
+# 						resultRGB = color(noise("uperlin",cp[0]), noise("uperlin",cp[1]),0.5);
+	assign		cp ___308_newpoint 	%line{36} %argrw{"wr"}
+# Custom/osl/src/cobble.osl:37
+# 						lumin = noise("usimplex",cp);
+	compref		$tmp28 cp $const5 	%line{37} %argrw{"wrr"}
+	noise		$tmp27 $const11 $tmp28 	%argrw{"wrr"}
+	compref		$tmp30 cp $const1 	%argrw{"wrr"}
+	noise		$tmp29 $const11 $tmp30 	%argrw{"wrr"}
+	color		resultRGB $tmp27 $tmp29 $const12 	%argrw{"wrrr"}
+# Custom/osl/src/cobble.osl:38
+# 
+	noise		lumin $const13 cp 	%line{38} %argrw{"wrr"}
+# Custom/osl/src/cobble.osl:29
+# 				point randpt = noise("perlin", point(x+seed*ss, y+seed*tt, 0));
+	add		___307_y ___307_y tinc 	%line{29} %argrw{"wrr"}
+# Custom/osl/src/cobble.osl:28
+# 		for (float y = 0; y <= 1.0; y = y + tinc) {
+	add		___305_x ___305_x sinc 	%line{28} %argrw{"wrr"}
+	end

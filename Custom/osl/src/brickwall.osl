@@ -1,0 +1,41 @@
+shader 
+Brickwall(
+	float scale = 10.0,
+	float smooth = 0.1,
+	float brickWidth = 0.25,
+	float brickHeight = .08,
+	float mortarThickness = 0.01,
+	float row_offset = 0.5,
+	float u_offset = 0.0,
+	float v_offset = 0.0,
+    output float resultF = 0
+    )
+{
+	float bmwidth = brickHeight + mortarThickness;
+	float bmheight = brickWidth + mortarThickness;
+
+	// float uu = mod((u / bmheight) * scale, 1);
+	// float vv = mod((v / bmwidth) * scale, 1);
+
+	float uu = ((u + u_offset) / bmheight);
+	float vv = ((v + v_offset) / bmwidth);
+	
+	float mwf = (mortarThickness*0.5/bmwidth);
+	float mhf = (mortarThickness*0.5/bmheight);
+
+	if(mod(vv*0.5, 1) > 0.5) {
+		uu = uu + 0.5;
+	}
+
+	float ubrick = floor(uu);
+	float vbrick = floor(vv);
+
+	uu -= ubrick;
+	vv -= vbrick;
+
+	float w = step(mwf, uu) - step(1-mwf, uu);
+	float h = step(mhf, vv) - step(1-mhf, vv);
+
+	resultF = mod(mix(0, 1, w*h), scale);
+
+}

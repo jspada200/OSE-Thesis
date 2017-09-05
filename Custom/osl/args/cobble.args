@@ -1,0 +1,8 @@
+<args format="1.0">
+	<shaderType>
+		<tag value="pattern" />
+	</shaderType>
+	<help />
+
+	<param default=" 1" label="scale" max="1" min="-1" name="scale" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 0" label="t" max="1" min="-1" name="t" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 0.01" label="max_pt_offset" max="1" min="-1" name="max_pt_offset" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 1" label="seed" max="1" min="-1" name="seed" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 0" label="s" max="1" min="-1" name="s" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 3" label="cols" name="cols" type="int" widget="defualt"><help /><tags><tag value="int" /></tags></param><param default=" 3" label="rows" name="rows" type="int" widget="defualt"><help /><tags><tag value="int" /></tags></param><output name="lumin"><tags><tag value="float" /></tags></output><output name="resultRGB"><tags><tag value="color" /><tag value="vector" /><tag value="normal" /><tag value="point" /></tags></output><rfmdata classification="rendernode/RenderMan/pattern" nodeid="369709" />
+</args>

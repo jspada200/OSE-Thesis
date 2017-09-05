@@ -1,0 +1,13 @@
+shader 
+cobblestone(
+    color basecolor = color(1,0,0),
+    float s = 0,
+    float t = 0,
+    output color resultRGB = 0,
+    )
+{
+
+color mincolor = color(0,0,1);
+point p = transform("local", P);
+resultRGB = color(s,t,0);
+}

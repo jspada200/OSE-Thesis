@@ -1,0 +1,37 @@
+##RenderMan RIB
+#
+# This example attempts to replicate Figure 16 from 
+# "Physically-Based Shading at Disney", Burley, 2012
+#
+# $Revision: #1 $ $Date: 2015/04/23 $
+#
+version 3.04
+Display "disney_spt" "it" "rgba"
+Projection "perspective" "float fov" [15]
+Format 563 512 1
+Option "searchpath" "string shader" ["/root/Desktop/ose/Custom/osl:@"]
+Option "searchpath" "string texture" ["/root/Desktop/ose/Custom/osl:@"]
+Option "searchpath" "string procedural" ["/root/Desktop/ose/Custom/osl:@"]
+Option "searchpath" "string rixplugin" ["/root/Desktop/ose/Custom/osl:@"]
+#RRG_inset_PATHOSL
+#RRG_inset_PATHARCHIVE
+Integrator "PxrPathTracer" "spt" "int numLightSamples" [4] 
+    "int numBxdfSamples" [4] "int numIndirectSamples" [0]
+Hider "raytrace" "int incremental" [1]
+    "int maxsamples" [50] "int minsamples" [9]
+Translate 0 0 49.2631
+Scale 1 1 -1 # world is right-handed
+WorldBegin 
+
+  ReadArchive '/root/Desktop/ose/OSE_Modules/exportschemes/lightrig.rib'
+
+	Attribute "visibility" "int transmission" [0]
+	AttributeBegin 
+		Attribute "identifier" "string name" ["sphere 0.0"]
+		Translate 0 0 0
+		ReadArchive '/tmp/tmp.rib'
+
+		Rotate -90 1 0 0
+		Sphere 5 -5 5 360 
+	AttributeEnd 
+WorldEnd 

@@ -1,0 +1,42 @@
+shader 
+cobblestone(
+    float s = 0,
+    float t = 0,
+    float seed = 1.0,
+    float max_pt_offset = .01,
+    float scale = 1.0,
+    int rows = 3,
+    int cols = 3,
+    output float lumin = 0.0,
+    output color resultRGB = color(0,0,0)
+    ) {
+
+	float ss = mod(s * scale, 1);
+	//float rs = mix(0.0, max_pt_offset, rand("perlin", ss));
+	//ss = ss + rs;
+	float tt = mod(t * scale, 1);
+	//float rt = mix(0.0, max_pt_offset, rand("perlin", tt));
+	//tt = tt + rt;
+
+	float sinc = 1.0 / rows;
+	float tinc = 1.0 / cols;
+
+	point cp = point(10,10,10);
+	point st = point(ss, tt, 0);
+
+	for (float x = 0; x <= 1.0; x = x + sinc) {
+		for (float y = 0; y <= 1.0; y = y + tinc) {
+				point randpt = noise("perlin", point(x+seed*ss, y+seed*tt, 0));
+				float px = mix(0.0, max_pt_offset, randpt[0]) + x;
+				float py = mix(0.0, max_pt_offset, randpt[1]) + y;
+				point newpoint = point(px, py, 0);
+				if(distance(st, newpoint) < distance(st, cp)){
+						float colorid = floor(mix(0, 3, noise("gabor", randpt)));
+						cp = newpoint;
+						resultRGB = color(noise("uperlin",cp[0]), noise("uperlin",cp[1]),0.5);
+						lumin = noise("usimplex",cp);
+
+				}
+		}
+	}
+}

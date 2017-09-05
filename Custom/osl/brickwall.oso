@@ -1,0 +1,126 @@
+OpenShadingLanguage 1.00
+# Compiled by oslc 1.7.4.pixar38bde12
+# options: -v -o /root/Desktop/OSE_Reorganized/OSE/Custom/osl/brickwall.oso
+shader Brickwall
+param	float	scale	10		%read{34,36} %write{2147483647,-1}
+param	float	smooth	0.1		%read{2147483647,-1} %write{2147483647,-1}
+param	float	brickWidth	0.25		%read{1,1} %write{2147483647,-1}
+param	float	brickHeight	0.079999998		%read{0,0} %write{2147483647,-1}
+param	float	mortarThickness	0.0099999998		%read{0,8} %write{2147483647,-1}
+param	float	row_offset	0.5		%read{2147483647,-1} %write{2147483647,-1}
+param	float	u_offset	0		%read{2,2} %write{2147483647,-1}
+param	float	v_offset	0		%read{4,4} %write{2147483647,-1}
+oparam	float	resultF	0		%read{2147483647,-1} %write{37,37}
+global	float	u	%read{2,2} %write{2147483647,-1}
+global	float	v	%read{4,4} %write{2147483647,-1}
+local	float	bmwidth	%read{5,7} %write{0,0}
+local	float	bmheight	%read{3,9} %write{1,1}
+local	float	uu	%read{18,25} %write{3,21}
+local	float	vv	%read{10,29} %write{5,22}
+local	float	mwf	%read{23,24} %write{7,7}
+local	float	mhf	%read{27,28} %write{9,9}
+local	float	ubrick	%read{21,21} %write{19,19}
+local	float	vbrick	%read{22,22} %write{20,20}
+local	float	w	%read{31,31} %write{26,26}
+local	float	h	%read{31,31} %write{30,30}
+temp	float	$tmp1	%read{3,3} %write{2,2}
+temp	float	$tmp2	%read{5,5} %write{4,4}
+const	float	$const1	0.5		%read{6,18} %write{2147483647,-1}
+temp	float	$tmp3	%read{7,7} %write{6,6}
+temp	float	$tmp4	%read{9,9} %write{8,8}
+temp	float	$tmp5	%read{16,16} %write{15,15}
+temp	float	$tmp6	%read{12,15} %write{10,10}
+const	float	$const3	1		%read{12,32} %write{2147483647,-1}
+const	string	$const4	"mod"		%read{11,33} %write{2147483647,-1}
+temp	float	$tmp7	%read{14,14} %write{13,13}
+temp	float	$tmp8	%read{13,13} %write{12,12}
+temp	float	$tmp9	%read{15,15} %write{14,14}
+temp	int	$tmp10	%read{17,17} %write{16,16}
+temp	float	$tmp11	%read{26,26} %write{23,23}
+temp	float	$tmp12	%read{26,26} %write{25,25}
+temp	float	$tmp13	%read{25,25} %write{24,24}
+temp	float	$tmp14	%read{30,30} %write{27,27}
+temp	float	$tmp15	%read{30,30} %write{29,29}
+temp	float	$tmp16	%read{29,29} %write{28,28}
+temp	float	$tmp17	%read{34,37} %write{32,32}
+const	float	$const6	0		%read{32,32} %write{2147483647,-1}
+temp	float	$tmp18	%read{32,32} %write{31,31}
+temp	float	$tmp19	%read{36,36} %write{35,35}
+temp	float	$tmp20	%read{35,35} %write{34,34}
+temp	float	$tmp21	%read{37,37} %write{36,36}
+code ___main___
+# Custom/osl/src/brickwall.osl:15
+# 	float bmheight = brickWidth + mortarThickness;
+	add		bmwidth brickHeight mortarThickness 	%filename{"Custom/osl/src/brickwall.osl"} %line{15} %argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:16
+# 
+	add		bmheight brickWidth mortarThickness 	%line{16} %argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:21
+# 	float vv = ((v + v_offset) / bmwidth);
+	add		$tmp1 u u_offset 	%line{21} %argrw{"wrr"}
+	div		uu $tmp1 bmheight 	%argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:22
+# 	
+	add		$tmp2 v v_offset 	%line{22} %argrw{"wrr"}
+	div		vv $tmp2 bmwidth 	%argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:24
+# 	float mhf = (mortarThickness*0.5/bmheight);
+	mul		$tmp3 mortarThickness $const1 	%line{24} %argrw{"wrr"}
+	div		mwf $tmp3 bmwidth 	%argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:25
+# 
+	mul		$tmp4 mortarThickness $const1 	%line{25} %argrw{"wrr"}
+	div		mhf $tmp4 bmheight 	%argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:27
+# 		uu = uu + 0.5;
+	mul		$tmp6 vv $const1 	%line{27} %argrw{"wrr"}
+	functioncall	$const4 16 	%argrw{"r"}
+# /opt/pixar/RenderManProServer-21.2/lib/osl/include/stdosl.h:135
+# PERCOMP1 (log2)
+	div		$tmp8 $tmp6 $const3 	%filename{"/opt/pixar/RenderManProServer-21.2/lib/osl/include/stdosl.h"} %line{135} %argrw{"wrr"}
+	floor		$tmp7 $tmp8 	%argrw{"wr"}
+	mul		$tmp9 $const3 $tmp7 	%argrw{"wrr"}
+	sub		$tmp5 $tmp6 $tmp9 	%argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:27
+# 		uu = uu + 0.5;
+	gt		$tmp10 $tmp5 $const1 	%filename{"Custom/osl/src/brickwall.osl"} %line{27} %argrw{"wrr"}
+	if		$tmp10 19 19 	%argrw{"r"}
+# Custom/osl/src/brickwall.osl:28
+# 	}
+	add		uu uu $const1 	%line{28} %argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:31
+# 	float vbrick = floor(vv);
+	floor		ubrick uu 	%line{31} %argrw{"wr"}
+# Custom/osl/src/brickwall.osl:32
+# 
+	floor		vbrick vv 	%line{32} %argrw{"wr"}
+# Custom/osl/src/brickwall.osl:34
+# 	vv -= vbrick;
+	sub		uu uu ubrick 	%line{34} %argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:35
+# 
+	sub		vv vv vbrick 	%line{35} %argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:37
+# 	float h = step(mhf, vv) - step(1-mhf, vv);
+	step		$tmp11 mwf uu 	%line{37} %argrw{"wrr"}
+	sub		$tmp13 $const3 mwf 	%argrw{"wrr"}
+	step		$tmp12 $tmp13 uu 	%argrw{"wrr"}
+	sub		w $tmp11 $tmp12 	%argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:38
+# 
+	step		$tmp14 mhf vv 	%line{38} %argrw{"wrr"}
+	sub		$tmp16 $const3 mhf 	%argrw{"wrr"}
+	step		$tmp15 $tmp16 vv 	%argrw{"wrr"}
+	sub		h $tmp14 $tmp15 	%argrw{"wrr"}
+# Custom/osl/src/brickwall.osl:40
+# 
+	mul		$tmp18 w h 	%line{40} %argrw{"wrr"}
+	mix		$tmp17 $const6 $const3 $tmp18 	%argrw{"wrrr"}
+	functioncall	$const4 38 	%argrw{"r"}
+# /opt/pixar/RenderManProServer-21.2/lib/osl/include/stdosl.h:135
+# PERCOMP2 (atan2)
+	div		$tmp20 $tmp17 scale 	%filename{"/opt/pixar/RenderManProServer-21.2/lib/osl/include/stdosl.h"} %line{135} %argrw{"wrr"}
+	floor		$tmp19 $tmp20 	%argrw{"wr"}
+	mul		$tmp21 scale $tmp19 	%argrw{"wrr"}
+	sub		resultF $tmp17 $tmp21 	%argrw{"wrr"}
+	end

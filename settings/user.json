@@ -1,0 +1,13 @@
+{
+    "RENDERER":"rman",
+    "CUSTOM_NODES": {
+    	"RISOSLNode": {
+    		"menuLabel": "New RIS OSL Node",
+    		"_name": "String",
+    		"_type": ["pattern"],
+    		"_style": "RISOSLNode",
+    		"_helptxt": "String"
+    	}
+    },
+    "PREVIEWSCENEFILE": "bxdf_sphere.rib"
+}

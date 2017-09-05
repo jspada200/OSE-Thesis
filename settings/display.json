@@ -1,0 +1,54 @@
+{
+    "MAINSTYLE": {
+        "interface-backgroundcolor": "#595259",
+        "textcolor": "#A6A5A4",
+        "font": "NA"
+
+    },
+
+    "SCENESTYLE": {
+        "stylesheet": "background-color: rgb(200, 200, 200);"
+    },
+
+    "NODES": {
+
+        "default": {
+            "min-width" : 350,
+            "min-height": 10,
+            "bgcolor": [135, 0, 0],
+            "selbgcolor": [68, 0, 0],
+            "boarderColor": [100, 100, 100],
+            "attribute_offset": 25,
+            "boarderWidth": 25,
+            "fontcolor": [255, 255, 255]  
+        },
+
+        "bxdf": {
+            "min-width" : 350,
+            "min-height": 10,
+            "bgcolor": [0, 255, 0],
+            "selbgcolor": [0, 135, 0],
+            "boarderColor": [100, 100, 100],
+            "attribute_offset": 25,
+            "boarderWidth": 25 ,
+            "fontcolor": [255, 255, 255]     
+        }
+
+    }, 
+    "INPUTS":{
+        "default": {
+            "radius": 15,
+            "fillcolor": [0, 255, 255],
+            "fontcolor": [255, 255, 255]
+        }
+
+    },
+    "OUTPUTS" : {
+        "default": {
+            "radius": 15,
+            "fillcolor": [0, 255, 255],
+            "fontcolor": [255, 255, 255]
+        }
+
+    }
+}

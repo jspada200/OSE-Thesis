@@ -1,0 +1,53 @@
+Option "ribparse" "string varsubst" ["$"]
+Option "searchpath" "shader"    "@:../shaders:${RMSTREE}/lib/shaders/:/opt/pixar/RenderManProServer-19.0/lib/rsl/shaders"
+Option "searchpath" "rixplugin" "@:${RMSTREE}/lib/shaders/"
+Option "searchpath" "texture"   "@:../textures"
+Option "searchpath" "archive"   "../archives:Cutter_Help/templates/Rib:custom_templates/Rib"
+#Option "statistics" "endofframe" [1]
+
+Hider "raytrace" "string integrationmode" ["path"] "int incremental" [1]
+	  "int minsamples" [0] "int maxsamples" [256]
+#Integrator "PxrPathTracer" "PxrPathTracer" "int maxPathLength" [10] "int allowCaustics" [0]
+PixelVariance 0.005
+
+Format 640 360 1
+#Display "untitled" "it" "rgba"
+Display "C:\Users\admin\Documents\out.tif" "file" "rgba"
+Projection "perspective" "fov" [20]
+
+Translate  0 0 30
+Rotate -30 1 0 0
+Rotate 45  0 1 0
+Scale 1 1 -1
+
+#Imager "background" "color color" [1 1 1]
+WorldBegin
+
+	AttributeBegin
+		#AreaLightSource "RMSGeoAreaLight" 1 "float intensity" [8] "color lightcolor" [1 1 1]
+		AreaLightSource "plausibleArealight" 1 "float intensity" [8] "color lightcolor" [1 1 1]
+
+		Attribute "visibility" "int camera" [1]
+		Attribute "visibility" "int indirect" [0] "int transmission" [0]
+		TransformBegin
+			Rotate   0 0 1 0
+			Rotate -40 1 0 0
+			Translate 0 0 10
+			Scale 2 2 1
+			Sides 1
+			Bxdf "PxrConstant" "const" "color emitColor" [1 1 1]
+			Polygon "P" [-0.5 -0.5 0  -0.5 0.5 0  0.5 0.5 0  0.5 -0.5 0]
+		TransformEnd
+	AttributeEnd
+
+	AttributeBegin
+		#RRG_inset_ReadArchive 'spath'
+		Translate 0 1 0
+		Sphere 1 -1 1 360
+	AttributeEnd
+	AttributeBegin
+		Scale 50 1 50
+		Polygon "P" [-0.5 0 -0.5  -0.5 0 0.5  0.5 0 0.5  0.5 0 -0.5]
+				"st" [0 0  0 1  1 1  1 0]
+	AttributeEnd
+WorldEnd

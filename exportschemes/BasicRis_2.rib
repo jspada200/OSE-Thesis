@@ -1,0 +1,60 @@
+Option "ribparse" "string varsubst" ["$"]
+IfBegin "!defined(RMSTREE)"
+	Option "user" "string RMSTREE" ["/opt/pixar/RenderManStudio-20.7-maya2015/"]
+IfEnd
+Option "searchpath" "shader" ":@"
+Option "searchpath" "rixplugin" "${RMSTREE}/lib/shaders:@"
+Option "searchpath" "texture"   "/home/jspada/Downloads:@"
+Option "searchpath" "archive"   "/home/jspada/Downloads:Cutter_Help/templates/Rib:custom_templates/Rib"
+#Option "statistics" "endofframe" [1]
+
+Hider "raytrace" "string integrationmode" ["path"] "int incremental" [1] "int minsamples" [0] "int maxsamples" [256]
+Integrator "PxrPathTracer" "PxrPathTracer" "int maxPathLength" [10] "int allowCaustics" [0]
+PixelVariance 0.005
+
+Format 640 360 1
+Display "untitled" "framebuffer" "rgba"
+Projection "perspective" "fov" [20]
+
+Translate  0 0 30
+Rotate -30 1 0 0
+Rotate 45  0 1 0
+Scale 1 1 -1
+
+#Imager "background" "color color" [1 1 1]
+WorldBegin
+	Bxdf "PxrLMDiffuse" "default"
+	TransformBegin
+		Scale 4 4 4
+		ReadArchive "cutrAxes.rib"
+	TransformEnd
+
+	AttributeBegin
+		AreaLightSource "PxrStdAreaLight" "PxrStdAreaLight4"
+				"float exposure" [8]
+				"color lightColor" [1 1 1]  # connectable
+		Attribute "visibility" "int camera" [1]
+		Sides 1 	# Sides 2 will make the arealight visible
+		Attribute "visibility" "int indirect" [0] "int transmission" [0]
+		TransformBegin
+			Rotate   0 0 1 0
+			Rotate -40 1 0 0
+			Translate 0 0 10
+			Scale 2 2 1
+			Bxdf "PxrLightEmission" "emitter"
+			ShadingRate 5
+			ReverseOrientation
+			Geometry "rectlight"
+		TransformEnd
+	AttributeEnd
+
+	AttributeBegin
+		Translate 0 1 0
+		Sphere 1 -1 1 360
+	AttributeEnd
+	AttributeBegin
+		Scale 50 1 50
+		Polygon "P" [-0.5 0 -0.5  -0.5 0 0.5  0.5 0 0.5  0.5 0 -0.5]
+				"st" [0 0  0 1  1 1  1 0]
+	AttributeEnd
+WorldEnd

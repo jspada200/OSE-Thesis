@@ -1,0 +1,8 @@
+<args format="1.0">
+	<shaderType>
+		<tag value="pattern" />
+	</shaderType>
+	<help />
+
+	<param default="1. 0. 0." label="rimcolor" name="rimcolor" type="color" widget="defualt"><help /><tags><tag value="color" /><tag value="vector" /><tag value="normal" /><tag value="point" /></tags></param><param default=" 0.2" label="rim_width" max="1" min="-1" name="rim_width" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default="1. 1. 1." label="basecolor" name="basecolor" type="color" widget="defualt"><help /><tags><tag value="color" /><tag value="vector" /><tag value="normal" /><tag value="point" /></tags></param><output name="resultRGB"><tags><tag value="color" /><tag value="vector" /><tag value="normal" /><tag value="point" /></tags></output><output name="resultF"><tags><tag value="float" /></tags></output><rfmdata classification="rendernode/RenderMan/pattern" nodeid="96943" />
+</args>

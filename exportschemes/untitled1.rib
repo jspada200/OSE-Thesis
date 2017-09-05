@@ -1,0 +1,45 @@
+Option "user" "string pass_class" ["Final"]
+#Option "user" "string quality" ["Preview"]
+Option "ribparse" "string varsubst" ["$"]
+IfBegin "!defined(RMSTREE)"
+	Option "user" "string RMSTREE" ["/opt/pixar/RenderManStudio-20.7-maya2015/"]
+IfEnd
+Option "searchpath" "shader"    "/home/jspada/Downloads:@"
+Option "searchpath" "texture"   "/home/jspada/Downloads:@"
+Option "searchpath" "archive"   "/home/jspada/Downloads:Cutter_Help/templates/Rib:custom_templates/Rib"
+
+Display "untitled" "it" "rgba"
+Format 640 360 1
+Projection "perspective" "fov" 20
+ShadingRate 5
+ 
+Translate  0 0 10
+Rotate -15 1 0 0
+Rotate 20   0 1 0
+Scale 1 1 -1
+#Imager "background" "background" [1 1 1]
+WorldBegin
+	Attribute "visibility" "int specular" [1] "int diffuse" [1] "int transmission" [1]
+	Attribute "trace" "int maxdiffusedepth" [1] "int maxspeculardepth" [2]
+	
+	TransformBegin
+		Rotate 180  0 1 0	# orbit 
+		Rotate 30  1 0 0	# elevation
+		Translate 0 0 -8   	# distance to world center
+		Scale 8 8 1
+		LightSource "ppAreaLight" 2 "intensity" 8
+	TransformEnd
+	AttributeBegin
+		Surface "ppMatte" "color diffuseColor" [1 1 1] "float diffuseGain" 0.4
+		Translate 0 0.5 0
+		Rotate -90 1 0 0
+		Scale 1 1 1
+		Polygon "P" [-0.5 0 -0.5  -0.5 0 0.5  0.5 0 0.5  0.5 0 -0.5] 
+	AttributeEnd
+	AttributeBegin
+		Surface "ppShiny" "color diffuseColor" [1 1 1] "float specularGain" 0.75
+		Scale 5 1 5
+		Polygon "P" [-0.5 0 -0.5  -0.5 0 0.5  0.5 0 0.5  0.5 0 -0.5] 
+				"st" [0 0  0 1  1 1  1 0]
+	AttributeEnd
+WorldEnd

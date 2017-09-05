@@ -1,0 +1,8 @@
+<args format="1.0">
+	<shaderType>
+		<tag value="Pattern" />
+	</shaderType>
+	<help />
+
+	<param default=" 0" label="v_offset" max="1" min="-1" name="v_offset" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 0" label="u_offset" max="1" min="-1" name="u_offset" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 0.01" label="mortarThickness" max="1" min="-1" name="mortarThickness" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 0.1" label="smooth" max="1" min="-1" name="smooth" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 0.25" label="brickWidth" max="1" min="-1" name="brickWidth" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 0.08" label="brickHeight" max="1" min="-1" name="brickHeight" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 10" label="scale" max="1" min="-1" name="scale" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><param default=" 0.5" label="row_offset" max="1" min="-1" name="row_offset" type="float" widget="defualt"><help /><tags><tag value="float" /></tags></param><output name="resultF"><tags><tag value="float" /></tags></output><rfmdata classification="rendernode/RenderMan/pattern" nodeid="146312" />
+</args>

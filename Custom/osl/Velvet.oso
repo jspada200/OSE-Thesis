@@ -1,0 +1,49 @@
+OpenShadingLanguage 1.00
+# Compiled by oslc 1.7.4.pixar38bde12
+# options: -v -o /root/Desktop/OSE_Reorganized/OSE/Custom/osl/Velvet.oso
+shader Velvet
+param	float	rim_width	0.2		%read{8,8} %write{2147483647,-1}
+param	float	t	1		%read{6,6} %write{2147483647,-1}
+param	color	basecolor	1 1 1		%read{9,9} %write{2147483647,-1}
+param	color	rimcolor	1 0 0		%read{9,9} %write{2147483647,-1}
+param	color	testcolor	1 0 0		%read{2147483647,-1} %write{2147483647,-1}
+oparam	color	resultRGB	0 0 0		%read{2147483647,-1} %write{9,9}
+oparam	float	resultF	0		%read{2147483647,-1} %write{10,10}
+global	point	P	%read{5,5} %write{2147483647,-1}
+global	vector	I	%read{0,0} %write{2147483647,-1}
+global	normal	N	%read{1,1} %write{2147483647,-1}
+local	vector	i	%read{2,2} %write{0,0}
+local	vector	n	%read{3,3} %write{1,1}
+local	float	d	%read{8,10} %write{7,8}
+temp	float	$tmp1	%read{7,7} %write{4,4}
+temp	float	$tmp2	%read{4,4} %write{3,3}
+temp	vector	$tmp3	%read{3,3} %write{2,2}
+temp	float	$tmp4	%read{6,6} %write{5,5}
+temp	float	$tmp5	%read{7,7} %write{6,6}
+const	float	$const1	1		%read{8,8} %write{2147483647,-1}
+const	float	$const2	0.5		%read{10,10} %write{2147483647,-1}
+code ___main___
+# Custom/osl/src/Velvet.osl:13
+# vector n = normalize(N);
+	normalize	i I 	%filename{"Custom/osl/src/Velvet.osl"} %line{13} %argrw{"wr"}
+# Custom/osl/src/Velvet.osl:14
+# float  d = fabs(dot(-i, n)) + (noise(P) * t);
+	normalize	n N 	%line{14} %argrw{"wr"}
+# Custom/osl/src/Velvet.osl:15
+# d = smoothstep(rim_width, 1.0, d);
+	neg		$tmp3 i 	%line{15} %argrw{"wr"}
+	dot		$tmp2 $tmp3 n 	%argrw{"wrr"}
+	fabs		$tmp1 $tmp2 	%argrw{"wr"}
+	noise		$tmp4 P 	%argrw{"wr"}
+	mul		$tmp5 $tmp4 t 	%argrw{"wrr"}
+	add		d $tmp1 $tmp5 	%argrw{"wrr"}
+# Custom/osl/src/Velvet.osl:16
+# resultRGB = mix(rimcolor, basecolor, d);
+	smoothstep	d rim_width $const1 d 	%line{16} %argrw{"wrrr"}
+# Custom/osl/src/Velvet.osl:17
+# resultF = d - 0.5;
+	mix		resultRGB rimcolor basecolor d 	%line{17} %argrw{"wrrr"}
+# Custom/osl/src/Velvet.osl:18
+# }
+	sub		resultF d $const2 	%line{18} %argrw{"wrr"}
+	end
